@@ -21,9 +21,7 @@ interface HeroGridSectionProps {
     highlightedText?: string;
     subtitle?: ReactNode | string;
     primaryCtaText?: string;
-    secondaryCtaText?: string;
     primaryCtaLink?: string;
-    secondaryCtaLink?: string;
     trustIndicators?: TrustIndicator[];
     className?: string;
 }
@@ -33,9 +31,7 @@ export function HeroGridSection({
     highlightedText = 'para exportar?',
     subtitle = 'Descúbrelo en 10 minutos con nuestro diagnóstico gratuito. Obtén un plan de acción personalizado para iniciar tu camino exportador.',
     primaryCtaText = 'Iniciar Diagnóstico Gratuito',
-    secondaryCtaText = 'Ver Demo',
     primaryCtaLink = '/diagnostic',
-    secondaryCtaLink = '#how-it-works',
     trustIndicators = TRUST_INDICATORS,
     className,
 }: HeroGridSectionProps) {
@@ -103,8 +99,8 @@ export function HeroGridSection({
                         {subtitle}
                     </p>
 
-                    {/* CTA Buttons */}
-                    <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
+                    {/* CTA Button */}
+                    <div className="mt-10">
                         <Link to={primaryCtaLink}>
                             <Button
                                 size="lg"
@@ -114,15 +110,6 @@ export function HeroGridSection({
                                 <ArrowRight className="h-5 w-5" />
                             </Button>
                         </Link>
-                        <a href={secondaryCtaLink}>
-                            <Button
-                                variant="outline"
-                                size="lg"
-                                className="h-14 gap-2 border-2 px-8 text-base font-semibold backdrop-blur-sm hover:border-primary/50 hover:bg-primary/5"
-                            >
-                                {secondaryCtaText}
-                            </Button>
-                        </a>
                     </div>
                 </div>
 
