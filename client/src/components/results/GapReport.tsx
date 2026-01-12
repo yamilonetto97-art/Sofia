@@ -147,26 +147,26 @@ export function GapReport({ gaps }: GapReportProps) {
 
                   {/* Current vs Target state */}
                   <div className="grid gap-3 sm:grid-cols-2">
-                    <div className="rounded-xl bg-red-50 dark:bg-red-950/30 p-4">
+                    <div className="rounded-xl bg-gradient-to-br from-red-500 to-red-600 p-4 shadow-md">
                       <div className="mb-2 flex items-center gap-2">
-                        <div className="h-2 w-2 rounded-full bg-red-500" />
-                        <span className="text-xs font-semibold text-red-800 dark:text-red-200">
+                        <div className="h-2 w-2 rounded-full bg-white/80" />
+                        <span className="text-xs font-bold text-white/90">
                           Estado actual
                         </span>
                       </div>
-                      <p className="text-sm font-medium text-red-950 dark:text-red-100">
+                      <p className="text-sm font-medium text-white">
                         {gap.currentState}
                       </p>
                     </div>
 
-                    <div className="rounded-xl bg-green-50 dark:bg-green-950/30 p-4">
+                    <div className="rounded-xl bg-gradient-to-br from-green-500 to-green-600 p-4 shadow-md">
                       <div className="mb-2 flex items-center gap-2">
-                        <div className="h-2 w-2 rounded-full bg-green-500" />
-                        <span className="text-xs font-semibold text-green-800 dark:text-green-200">
+                        <div className="h-2 w-2 rounded-full bg-white/80" />
+                        <span className="text-xs font-bold text-white/90">
                           Estado objetivo
                         </span>
                       </div>
-                      <p className="text-sm font-medium text-green-950 dark:text-green-100">
+                      <p className="text-sm font-medium text-white">
                         {gap.targetState}
                       </p>
                     </div>

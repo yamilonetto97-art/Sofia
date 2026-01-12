@@ -21,6 +21,7 @@ npm run preview  # Preview production build locally
 ## Architecture
 
 ### Tech Stack
+
 - React 19 + TypeScript + Vite 7
 - Tailwind CSS v4 (via @tailwindcss/vite plugin)
 - Zustand for state management (persisted to localStorage)
@@ -54,6 +55,7 @@ npm run preview  # Preview production build locally
 ### Key Patterns
 
 **Diagnostic Flow:**
+
 1. User provides company info (sector, size)
 2. Multi-step wizard presents questions by category (6 categories)
 3. Answers stored in Zustand with localStorage persistence
@@ -62,12 +64,14 @@ npm run preview  # Preview production build locally
 6. Results page shows score breakdown and exportable PDF report
 
 **Scoring System:**
+
 - Each category has a weight (sums to 1.0)
 - Questions have individual weights within categories
 - Total score (0-100) determines export readiness level:
   - `not_ready` (0-25), `early_stage` (26-50), `developing` (51-70), `ready` (71-85), `export_pro` (86-100)
 
 **Path Aliases:**
+
 - `@/` maps to `src/` (configured in vite.config.ts and tsconfig.app.json)
 
 ## Adding shadcn/ui Components

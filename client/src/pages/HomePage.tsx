@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Layout } from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { HeroGridSection } from '@/components/ui/hero-grid-section';
 import {
   CheckCircle,
   FileText,
@@ -13,7 +14,6 @@ import {
   DollarSign,
   Globe,
   Users,
-  Sparkles,
 } from 'lucide-react';
 
 const benefits = [
@@ -51,62 +51,8 @@ const categories = [
 export function HomePage() {
   return (
     <Layout>
-      {/* Hero Section - Improved */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-primary/3 to-background py-20 md:py-32">
-        {/* Background decoration */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-1/2 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
-          <div className="absolute -bottom-1/4 right-0 h-[300px] w-[300px] rounded-full bg-primary/5 blur-3xl" />
-        </div>
-
-        <div className="container relative mx-auto px-4 text-center">
-          {/* Badge */}
-          <Badge variant="outline" className="mb-6 gap-2 px-4 py-1.5 text-sm animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <Sparkles className="h-3.5 w-3.5 text-primary" />
-            <span className="text-muted-foreground">Diagnóstico en 28 preguntas, resultados al instante</span>
-          </Badge>
-
-          {/* Title */}
-          <h1 className="mx-auto max-w-4xl text-4xl font-bold tracking-tight text-foreground animate-in fade-in slide-in-from-bottom-4 duration-500 delay-100 md:text-5xl lg:text-6xl">
-            ¿Tu empresa está lista{' '}
-            <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-              para exportar?
-            </span>
-          </h1>
-
-          {/* Description */}
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-4 duration-500 delay-200 md:text-xl">
-            Descúbrelo en 10 minutos con nuestro diagnóstico gratuito.
-            Obtén un plan de acción personalizado para iniciar tu camino exportador.
-          </p>
-
-          {/* CTA */}
-          <div className="mt-10 flex flex-col items-center gap-4 animate-in fade-in slide-in-from-bottom-4 duration-500 delay-300 sm:flex-row sm:justify-center">
-            <Link to="/diagnostic">
-              <Button size="lg" className="h-12 gap-2 px-8 text-base shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30">
-                Iniciar Diagnóstico Gratuito
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-
-          {/* Trust indicators */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground animate-in fade-in duration-500 delay-500">
-            <span className="flex items-center gap-1.5">
-              <CheckCircle className="h-4 w-4 text-green-500" />
-              Sin registro
-            </span>
-            <span className="flex items-center gap-1.5">
-              <CheckCircle className="h-4 w-4 text-green-500" />
-              100% gratuito
-            </span>
-            <span className="flex items-center gap-1.5">
-              <CheckCircle className="h-4 w-4 text-green-500" />
-              Resultados inmediatos
-            </span>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section - New Grid Component */}
+      <HeroGridSection />
 
       {/* Benefits Section - Improved */}
       <section className="py-20">

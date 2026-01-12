@@ -65,7 +65,7 @@ export function ResultsPage() {
     <Layout>
       <div className="container mx-auto px-4 py-12 max-w-7xl">
         {/* Header mejorado */}
-        <div className="mb-12 text-center fade-in">
+        <div className="mb-8 text-center fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 rounded-full bg-primary/10 text-primary text-sm font-semibold">
             <CheckCircle2 className="h-4 w-4" />
             Diagnóstico Completado
@@ -80,43 +80,45 @@ export function ResultsPage() {
           )}
         </div>
 
+        {/* Acciones principales - ARRIBA para visibilidad inmediata */}
+        <div className="mb-10 fade-in" style={{ animationDelay: '50ms' }}>
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+            <Button
+              onClick={handleDownloadPDF}
+              size="lg"
+              className="gap-2 shadow-lg hover:shadow-xl transition-all hover:scale-105 bg-gradient-to-r from-primary to-primary/90"
+            >
+              <Download className="h-5 w-5" />
+              <span className="font-semibold">Descargar PDF</span>
+            </Button>
+            <Button
+              variant="outline"
+              onClick={handleShare}
+              size="lg"
+              className="gap-2 hover-lift border-2 hover:border-primary/50"
+            >
+              <Share2 className="h-5 w-5" />
+              <span className="font-semibold">Compartir</span>
+            </Button>
+            <Button
+              variant="outline"
+              onClick={handleNewDiagnostic}
+              size="lg"
+              className="gap-2 hover-lift border-2 hover:border-success/50 hover:text-success"
+            >
+              <RotateCcw className="h-5 w-5" />
+              <span className="font-semibold">Nuevo Diagnóstico</span>
+            </Button>
+          </div>
+        </div>
+
         {/* Score principal */}
-        <div className="mb-12 fade-in" style={{ animationDelay: '100ms' }}>
+        <div className="mb-12 fade-in" style={{ animationDelay: '150ms' }}>
           <ScoreDisplay result={result} />
         </div>
 
-        {/* Acciones con efectos mejorados */}
-        <div className="mb-12 flex flex-wrap justify-center gap-4 fade-in" style={{ animationDelay: '200ms' }}>
-          <Button
-            onClick={handleDownloadPDF}
-            size="lg"
-            className="gap-2 shadow-lg hover:shadow-xl transition-all hover:scale-105"
-          >
-            <Download className="h-5 w-5" />
-            <span className="font-semibold">Descargar PDF</span>
-          </Button>
-          <Button
-            variant="outline"
-            onClick={handleShare}
-            size="lg"
-            className="gap-2 hover-lift border-2"
-          >
-            <Share2 className="h-5 w-5" />
-            <span className="font-semibold">Compartir</span>
-          </Button>
-          <Button
-            variant="outline"
-            onClick={handleNewDiagnostic}
-            size="lg"
-            className="gap-2 hover-lift border-2"
-          >
-            <RotateCcw className="h-5 w-5" />
-            <span className="font-semibold">Nuevo Diagnóstico</span>
-          </Button>
-        </div>
-
         {/* Desglose por categoría */}
-        <div className="mb-12 fade-in" style={{ animationDelay: '300ms' }}>
+        <div className="mb-12 fade-in" style={{ animationDelay: '250ms' }}>
           <Card className="shadow-xl hover-lift border-2 overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-warning to-success" />
             <CardHeader className="bg-gradient-to-br from-white to-gray-50/50">
@@ -221,6 +223,39 @@ export function ResultsPage() {
               </div>
             </CardContent>
           </Card>
+        </div>
+
+        {/* CTA para nuevo diagnóstico - Sección destacada */}
+        <div className="mb-8 fade-in" style={{ animationDelay: '600ms' }}>
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary/90 to-orange-500 p-8 md:p-12 text-white shadow-2xl">
+            {/* Decorative elements */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2" />
+
+            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="text-center md:text-left">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-xs font-semibold mb-4">
+                  <RotateCcw className="h-3 w-3" />
+                  ¿Mejoraste tu empresa?
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                  ¡Realiza un Nuevo Diagnóstico!
+                </h3>
+                <p className="text-white/80 max-w-md">
+                  Mide tu progreso y descubre cuánto has avanzado en tu camino exportador. Recomendamos hacerlo cada 3 meses.
+                </p>
+              </div>
+
+              <Button
+                onClick={handleNewDiagnostic}
+                size="lg"
+                className="bg-white text-primary hover:bg-gray-100 gap-2 shadow-xl hover:shadow-2xl transition-all hover:scale-105 font-bold text-base px-8"
+              >
+                <RotateCcw className="h-5 w-5" />
+                Nuevo Diagnóstico
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </Layout>
