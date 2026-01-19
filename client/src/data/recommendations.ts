@@ -8,11 +8,6 @@ export const RESOURCES_BY_CATEGORY: Record<CategoryId, Resource[]> = {
       url: 'https://www.indecopi.gob.pe/marcas',
       description: 'Registro de marcas y propiedad intelectual en Perú',
     },
-    {
-      name: 'PROMPERÚ - Desarrollo de Producto',
-      url: 'https://www.promperu.gob.pe/',
-      description: 'Asistencia técnica para adaptación de productos',
-    },
   ],
   operations: [
     {
@@ -67,22 +62,12 @@ export const RESOURCES_BY_CATEGORY: Record<CategoryId, Resource[]> = {
       description: 'Sistema Integrado de Información de Comercio Exterior',
     },
     {
-      name: 'PROMPERÚ - Exportaciones',
-      url: 'https://www.promperu.gob.pe/',
-      description: 'Ferias, misiones comerciales y ruedas de negocio',
-    },
-    {
       name: 'Trade Map',
       url: 'https://www.trademap.org/',
       description: 'Estadísticas de comercio internacional',
     },
   ],
   human_resources: [
-    {
-      name: 'PROMPERÚ - Capacitaciones',
-      url: 'https://www.promperu.gob.pe/TurismoIN/sitio/CapacitacionesPublico',
-      description: 'Cursos gratuitos de comercio exterior',
-    },
     {
       name: 'ADEX - Escuela de Negocios',
       url: 'https://www.adexperu.edu.pe/',
