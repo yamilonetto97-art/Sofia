@@ -194,7 +194,6 @@ export function ResultsPage() {
                 {[
                   'Descarga el PDF y compártelo con tu equipo',
                   'Prioriza las brechas críticas identificadas',
-                  'Contacta a PROMPERÚ para asesoría gratuita',
                   'Revisa los recursos sugeridos en cada brecha',
                   'Vuelve a hacer el diagnóstico en 3 meses para medir tu progreso'
                 ].map((step, idx) => (
@@ -205,22 +204,6 @@ export function ResultsPage() {
                     <p className="text-sm font-medium text-foreground pt-0.5">{step}</p>
                   </div>
                 ))}
-              </div>
-              <div className="pt-2">
-                <a
-                  href="https://www.promperu.gob.pe/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button
-                    variant="default"
-                    size="lg"
-                    className="gap-2 shadow-lg hover:shadow-xl transition-all hover:scale-105 w-full sm:w-auto"
-                  >
-                    <CheckCircle2 className="h-5 w-5" />
-                    <span className="font-semibold">Visitar PROMPERÚ</span>
-                  </Button>
-                </a>
               </div>
             </CardContent>
           </Card>

@@ -73,7 +73,7 @@ export function QuestionCard({
             onValueChange={(value) => onAnswer(parseInt(value, 10))}
             className="space-y-2 pl-12"
           >
-            {question.options.map((option, index) => {
+            {question.options.map((option) => {
               const isSelected = selectedValue === option.value;
 
               return (
@@ -112,16 +112,7 @@ export function QuestionCard({
                   </div>
 
                   {/* Option number indicator */}
-                  <div
-                    className={cn(
-                      'ml-2 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-medium transition-colors',
-                      isSelected
-                        ? 'bg-primary text-primary-foreground'
-                        : 'bg-muted/50 text-muted-foreground'
-                    )}
-                  >
-                    {index + 1}
-                  </div>
+
                 </div>
               );
             })}
